@@ -2,9 +2,7 @@ package edu.miu.ratingdataservice.controllers;
 
 import edu.miu.ratingdataservice.dao.UserRating;
 import edu.miu.ratingdataservice.models.Rating;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,5 +27,10 @@ public class ratingResource {
         return userRating;
     }
 
+    @RequestMapping(value = "/saveRating", method = RequestMethod.POST)
+    public Rating saveRating(@RequestBody Rating rating){
+        System.out.println(">>> rating saved ssuccessfully");
+        return rating;
+    }
 
 }
