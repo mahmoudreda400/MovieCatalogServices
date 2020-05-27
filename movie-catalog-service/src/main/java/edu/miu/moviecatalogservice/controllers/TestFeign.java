@@ -19,7 +19,7 @@ public class TestFeign {
         return ratingProxy.getMovieRating(movieId);
     }
 
-    @GetMapping(value = "/testFeign/saveRating}")
+    @GetMapping(value = "/testFeign/saveRating")
     public Rating getMovieRating(){
         System.out.println(">>> calling saveRating -> feign");
         Rating rating = new Rating();
